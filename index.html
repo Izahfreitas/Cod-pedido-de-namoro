@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Surprise</title>
+      <style>
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(120deg, #481566, #060631fa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+         }
+
+         .box {
+            font-weight: 600;
+            font-size: 27px;
+            color: white;
+            height: 400px;
+            width: 450px;
+            border-radius: 10px;
+            background: rgba(5, 5, 5, 0.5);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         }
+
+         a {
+            color: #481566;
+            text-decoration: none;
+         }
+
+         .button-container {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-around;
+            height: 50px;
+            width: 150px;
+         }
+         button {
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            height: 40px;
+            width: 70px;
+            background-color: #fff;
+            border-radius: 5px;
+            color: #481566;
+            font-weight: 600;
+         }
+
+         @media (max-width: 500px) {
+            .box {
+               width: 350px;
+               height: 300px;
+            }
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="box">
+         <p>namora cmg?</p>
+         <div class="button-container">
+            <button>
+               <a
+                  href="https://www.youtube.com/watch?v=kWvFoR-Wf-I"
+                  >Sim
+               </a>
+            </button>
+            <button id="not">Não</button>
+         </div>
+      </div>
+   </body>
+   <script>
+      let button = document.getElementById("not");
+      let height = window.innerHeight - 50;
+      let width = window.innerWidth - 50;
+
+      button.addEventListener("mouseover", () => {
+         button.style.position = "absolute";
+         button.style.top = Math.random() * height + "px";
+         button.style.left = Math.random() * width + "px";
+      });
+   </script>
+</html>
